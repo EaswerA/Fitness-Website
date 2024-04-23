@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="macrocalculatorcss.css">
+</head>
+<body>
+    <div class="visit"><a href="http://www.macro-calculator.com" target="_blank">Visit the live version here!</a></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <h1>Macro Calculator</h1>
+                <p>Quickly calculate the amount of calories any food item or meal yields by entering the amount of protein,
+                    carbohydrates and fat by grams. Details can often be found on the back of food packs per serving. </p>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="four columns">
+                        <label for="carbs">CARBS<span>(g)</span></label>
+                        <input class="u-full-width" type="number" placeholder="0" id="carbs" min="0">
+                    </div>
+                    <div class="four columns">
+                        <label for="protien">PROTEIN<span>(g)</span></label>
+                        <input class="u-full-width" type="number" placeholder="0" id="protien" min="0">
+                    </div>
+                    <div class="four columns">
+                        <label for="fats">FATS<span>(g)</span></label>
+                        <input class="u-full-width" type="number" placeholder="0" id="fats" min="0">
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="twelve columns total">
+                    <p>YOUR RESULTS</p>
+                    <h3 class="calories"><span>0</span> kcal</h3>
+    
+                    <p class="thickUnder">MACRONUTRIENTS</p>
+                    <div class="sideC">Carbohydrate: <span class="c">0</span>g / <span class="percent"></span>% </div>
+    
+    
+                    <div class="sideF">Fat: <span class="c">0</span>g / <span class="percent"></span>%</div>
+    
+    
+                    <div class="sideP">Protien: <span class="c">0</span>g / <span class="percent"></span>% </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row tabs">
+            <div class="four columns tab1">Protein </div>
+            <div class="four columns tab2">Carbohydrates</div>
+            <div class="four columns tab3">Fats</div>
+            <div class="twelve columns tabP">
+                <p>Protein helps build and prevent muscle loss whilst keeping you fuller for longer. It requires more energy
+                    from your body to digest than any other macro effectively burning more calorie per gram consumed. Some
+                    good examples of protien sources include:
+                </p>
+                <ul>
+                    <li>Meat</li>
+                    <li>Eggs</li>
+                    <li>Protien Shakes</li>
+                    <li>Dairy</li>
+                </ul>
+            </div>
+            <div class="twelve columns tabC">
+                <p>Commonly speaking, carbs are largely divided into simple and complex carbohydrates depending on how
+                    easily the body can break them down. Good carb sources such as fruit, vegetables and grains all provide
+                    our body with energy by storing themselves as glycogen whilst often also being very dense in vitamins
+                    and fiber. Some good examples of protien sources include:
+                </p>
+                <ul>
+                    <li>Oats</li>
+                    <li>Fruit</li>
+                    <li>Sweet potatoes</li>
+                </ul>
+            </div>
+            <div class="twelve columns tabF">
+                <p>Fats assist in the absorption of vitamins, brain function, hormone regulation and much more. Some good
+                    example of fat sources include:</p>
+                <ul>
+                    <li>Meat</li>
+                    <li>Nut butters</li>
+                    <li>Oil</li>
+                </ul>
+            </div>
+        </div>
+    
+    
+    </div>
+    <script src="macrocalculatorjs.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background: black;
+}
+
+input[type="number"] {
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+}
+
+h1 {
+    font-weight: bold;
+    color: #FFF;
+}
+
+h3 {
+    color: #FFF;
+    font-weight: bold;
+}
+
+label{
+    color: #FFF;
+}
+p {
+    color: #FFF;
+}
+
+label span {
+    font-size: 1rem;
+    padding-left: 1%;
+}
+
+.total {
+    background: #FFF;
+    color: #000;
+    border-radius: 0.4rem;
+    padding: 2rem;
+}
+
+.total p {
+    color: #000;
+}
+
+.thickUnder {
+    border-bottom: 5px solid #000;
+    width: 15rem;
+    font-weight: bold;
+}
+
+.visit {
+    color: white;
+    font-size: 1.1rem;
+    background: #de7537;
+    width: 143px;
+    padding: 6px;
+    border-radius: 10px;
+    position: fixed;
+    right: 20px;
+}
+
+.visit a {
+    color: white;
+    text-decoration: none;
+}
+
+.tabs {
+    padding-top: 2rem;
+}
+
+.tab1,
+.tab2,
+.tab3 {
+    background: #FFF;
+    color: #000;
+    -webkit-border-top-left-radius: 0.4rem;
+    -webkit-border-top-right-radius: 0.4rem;
+    -moz-border-radius-topleft: 0.4rem;
+    -moz-border-radius-topright: 0.4rem;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    padding: 1rem;
+    cursor: pointer;
+
+}
+
+.tabP,
+.tabC,
+.tabF {
+    background: #FFF;
+    padding: 3rem;
+}
+
+.tabP p,
+.tabC p,
+.tabF p {
+    color: #000;
+}
+
+.tabC,
+.tabF {
+    display: none;
+}
+
+.columns {
+    /* background:red;  
+  
+}
+
+.row{
+  /*background: black;
+}
