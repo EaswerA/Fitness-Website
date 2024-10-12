@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    color: #f2f5f7;
+    font-family: Rubik;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: black;
+}
+
+nav {
+    height: 6rem;
+    width: 100vw;
+    background-color: #131418;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+/*Styling logo*/
+.logo {
+    padding: 1vh 1vw;
+    text-align: center;
+}
+
+.logo img {
+    height: 5rem;
+    width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    margin: 0 0.7vw;
+}
+
+.nav-links li a:hover {
+    color: #61DAFB;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #61DAFB;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: all ease-in-out 250ms;
+}
+
+.nav-links li a:hover::before {
+    width: 100%;
+}
+
+/*Styling Buttons*/
+.login-button {
+    background-color: transparent;
+    border: 1.5px solid #f2f5f7;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    margin-left: 2vw;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+.login-button:hover {
+    color: #131418;
+    background-color: #f2f5f7;
+    border: 1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+
+
+.join-button {
+    color: #131418;
+    background-color: #61DAFB;
+    border: 1.5px solid #61DAFB;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.join-button:hover {
+    color: #f2f5f7;
+    background-color: transparent;
+    border: 1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 800px) {
+    nav {
+        position: fixed;
+        z-index: 3;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.7s;
+    }
+
+    .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 0.8s;
+    }
+
+    .nav-links li:nth-child(6) {
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+
+    .nav-links li:nth-child(7) {
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+
+    li.fade {
+        opacity: 1;
+    }
+}
+
+/*Animating Hamburger Icon on Click*/
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    transition: all 0.7s ease;
+    width: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+:root {
+    --purple: rgb(49, 223, 179);
+    --violet: rgb(223, 88, 171);
+    --pink: rgb(212, 6, 34);
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+.magic-text1 {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(to right,
+            var(--purple),
+            var(--violet),
+            var(--pink),
+            var(--purple));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="hom.jpg" alt="Logo Image">
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="H.html">Home</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="Tools.html">Tools</a></li>
+            <li><a href="Articles.html">Articles</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><button type="button" class="login-button" id="loginbutton">Login</button></li>
+            <li><button class="join-button" id="signupbutton">Join</button></li>
+        </ul>
+    </nav><br><br><br><br><br><br>
+    <h1 style="padding-left: 230px; font-size: 50px;">Click on the desired body part to obtain <span class="magic-text1">exercises</span> for it</h1><br><hr>
+    <p style="padding-left: 250px; font-size: 20px;">You can use these numerous exercises to structure a workout plan per your convenience</p><br>
+    <img src="HumanBody.jpeg" style="padding-left: 450px;" usemap="#map2">
+    <map name="map2">
+        <area shape="poly" coords="759,341,780,341,756,382,774,382" href="calves.html" target="_blank" alt="calves">
+        <area shape="poly" coords="818,341,841,341,822,382,841,382" href="calves.html" target="_blank" alt="calves">
+        <area shape="poly" coords="532,339,538,339,532,371,538,371" href="calves.html" target="_blank" alt="calves">
+        <area shape="poly" coords="555,339,559,339,545,371,555,371" href="calves.html" target="_blank" alt="calves">
+        <area shape="poly" coords="590,339,593,339,595,371,604,371" href="calves.html" target="_blank" alt="calves">
+        <area shape="poly" coords="614,339,617,339,612,371,618,371" href="calves.html" target="_blank" alt="calves">
+        <area shape="poly" coords="505,175,528,175,503,206,514,223" href="forearms.html" target="_blank" alt="forearms">
+        <area shape="poly" coords="623,175,644,175,634,223,645,206" href="forearms.html" target="_blank" alt="forearms">
+        <area shape="poly" coords="728,175,751,175,728,206,739,223" href="forearms.html" target="_blank" alt="forearms">
+        <area shape="poly" coords="846,175,870,175,870,206,859,223" href="forearms.html" target="_blank" alt="forearms">
+        <area shape="poly" coords="765,212,833,212,758,256,840,256" href="glutes.html" target="_blank" alt="glutes">
+        <area shape="poly" coords="756,258,796,258,759,319,787,319" href="hamstrings.html" target="_blank" alt="hamstrings">
+        <area shape="poly" coords="802,258,840,258,810,319,839,319" href="hamstrings.html" target="_blank" alt="hamstrings">
+        <area shape="poly" coords="765,105,778,105,793,158,785,193,770,162" href="lats.html" target="_blank" alt="lats">
+        <area shape="poly" coords="818,105,836,105,802,158,813,193,826,162" href="lats.html" target="_blank" alt="lats">
+        <area shape="poly" coords="796,160,800,160,809,204,787,204" href="lowerback.html" target="_blank" alt="lowerback">
+        <area shape="poly" coords="750,95,761,101,761,116,737,127,741,99" href="rearshoulders.html" target="_blank" alt="rearshoulders">
+        <area shape="poly" coords="850,95,837,101,837,116,859,127,855,99" href="rearshoulders.html" target="_blank" alt="rearshoulders">
+        <area shape="poly" coords="558,75,588,75,615,88,573,95,534,90" href="traps.html" target="_blank" alt="traps">
+        <area shape="poly" coords="798,59,841,90,756,90" href="traps.html" target="_blank" alt="traps">
+        <area shape="poly" coords="798,75,813,101,798,132,784,101" href="traps-middle.html" target="_blank" alt="trapsmiddle">
+        <area shape="poly" coords="758,121,761,140,752,164,741,169,735,158,739,132" href="triceps.html" target="_blank" alt="triceps">
+        <area shape="poly" coords="841,121,837,140,846,164,857,169,863,158,859,132" href="triceps.html" target="_blank" alt="triceps">
+        <area shape="poly" coords="556,138,595,138,591,214,556,214" href="AbsDup.html" target="_blank" alt="abs">
+        <area shape="poly" coords="531,121,536,129,527,162,518,175,508,160,512,138" href="BicepsDup.html" target="_blank" alt="biceps">
+        <area shape="poly" coords="617,121,612,129,621,162,630,175,639,160,636,138" href="BicepsDup.html" target="_blank" alt="biceps">
+        <area shape="poly" coords="574,99,545,101,536,119,547,135,599,135,614,119,604,101" href="ChestDup.html" target="_blank" alt="chest">
+        <area shape="poly" coords="540,142,553,142,553,206,542,201" href="ObliquesDup.html" target="_blank" alt="obliques">
+        <area shape="poly" coords="610,142,597,142,597,206,606,201" href="ObliquesDup.html" target="_blank" alt="obliques">
+        <area shape="poly" coords="542,221,571,249,562,315,534,331,536,247" href="QuadDup.html" target="_blank" alt="quads">
+        <area shape="poly" coords="604,221,580,249,588,315,610,331,612,247" href="QuadDup.html" target="_blank" alt="quads">
+        <area shape="poly" coords="525,95,538,103,516,131,516,110" href="ShoulderDup.html" target="_blank" alt="shoulders">
+        <area shape="poly" coords="567,95,610,103,630,131,634,110" href="ShoulderDup.html" target="_blank" alt="shoulders">
+    </map><br><br><hr>
+    <p style="font-size: 45px; font-weight: 300;"><span class="magic-text1">Beginner</span> Workout Routine - 4 days a week</p>
+    <ul style="font-size: 30px; margin: 40px;">
+        <li>Day 1 : Upper Body</li>
+        <li>Day 2 : Lower Body</li>
+        <li>Day 3 : Rest</li>
+        <li>Day 4 : Upper Body</li>
+        <li>Day 5 : Lower Body</li>
+        <li>Day 6: Rest</li>
+        <li>Day 7 : Rest</li>
+    </ul>
+    <p style="font-size: 45px; font-weight: 300;"><span class="magic-text1">Intermediate</span> Workout Routine - 5 days a week</p>
+    <ul style="font-size: 30px; margin: 40px;">
+        <li>Day 1 : Push day</li>
+        <li>Day 2 : Pull day</li>
+        <li>Day 3 : Legs and Core Day</li>
+        <li>Day 4 : Rest</li>
+        <li>Day 5 : Upper Body</li>
+        <li>Day 6: Lower Body</li>
+        <li>Day 7 : Rest</li>
+    </ul>
+    <p style="font-size: 45px; font-weight: 300;"><span class="magic-text1">Advanced</span> Workout Routine - 6 days a week</p>
+    <ul style="font-size: 30px; margin: 40px;">
+        <li>Day 1 : Push day</li>
+        <li>Day 2 : Pull day</li>
+        <li>Day 3 : Legs and Core Day</li>
+        <li>Day 4 : Push Day</li>
+        <li>Day 5 : Pull day</li>
+        <li>Day 6: Legs and Core Day</li>
+        <li>Day 7 : Rest</li>
+    </ul>
+    <script src="HJS.js"></script>
+</body>
+</html>

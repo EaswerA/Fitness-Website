@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plans</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            padding: 20px;
+        }
+        .diet-plan {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            max-width: 500px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .diet-plan h2 {
+            background-color: #28a745;
+            color: #fff;
+            margin: 0;
+            padding: 15px;
+            text-align: center;
+        }
+        .diet-plan.non-vegetarian h2 {
+            background-color: #dc3545;
+        }
+        .diet-plan ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 20px;
+        }
+        .diet-plan li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .diet-plan li:last-child {
+            border-bottom: none;
+        }
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Healthy Diet Plans</h1>
+    </header>
+
+    <div class="container">
+        <div class="diet-plan">
+            <h2>Vegetarian Diet Plan</h2>
+            <ul>
+                <li>
+                    <strong>Breakfast:</strong> Oatmeal with fruits, chia seeds, and almond milk.
+                </li>
+                <li>
+                    <strong>Mid-Morning Snack:</strong> Smoothie with spinach, banana, and almond butter.
+                </li>
+                <li>
+                    <strong>Lunch:</strong> Quinoa salad with mixed vegetables, chickpeas, and a lemon-tahini dressing.
+                </li>
+                <li>
+                    <strong>Afternoon Snack:</strong> Carrot sticks with hummus.
+                </li>
+                <li>
+                    <strong>Dinner:</strong> Lentil soup with whole grain bread and a side of roasted vegetables.
+                </li>
+                <li>
+                    <strong>Evening Snack:</strong> A handful of mixed nuts and an apple.
+                </li>
+            </ul>
+        </div>
+
+        <div class="diet-plan non-vegetarian">
+            <h2>Non-Vegetarian Diet Plan</h2>
+            <ul>
+                <li>
+                    <strong>Breakfast:</strong> Scrambled eggs with spinach and avocado toast.
+                </li>
+                <li>
+                    <strong>Mid-Morning Snack:</strong> Greek yogurt with honey and blueberries.
+                </li>
+                <li>
+                    <strong>Lunch:</strong> Grilled chicken salad with mixed greens, cherry tomatoes, and a balsamic vinaigrette.
+                </li>
+                <li>
+                    <strong>Afternoon Snack:</strong> Sliced bell peppers with guacamole.
+                </li>
+                <li>
+                    <strong>Dinner:</strong> Baked salmon with quinoa and steamed broccoli.
+                </li>
+                <li>
+                    <strong>Evening Snack:</strong> Cottage cheese with pineapple chunks.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Healthy Diet Plans. All Rights Reserved.
+    </footer>
+</body>
+</html>

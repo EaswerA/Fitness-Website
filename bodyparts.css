@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #f2f5f7;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+
+    font-weight: 300;
+
+
+    --primaryColor: black;
+    --cardColor: rgb(46, 46, 47);
+    --navpopColour: #131418;
+    --textColour: white;
+    --heading: white;
+
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--primaryColor);
+}
+
+nav {
+    height: 6rem;
+    width: 100vw;
+    background-color: var(--navpopColour);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+/*Styling logo*/
+.logo {
+    padding: 1vh 1vw;
+    text-align: center;
+}
+
+.logo img {
+    height: 5rem;
+    width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    margin: 0 0.7vw;
+}
+
+.nav-links li a:hover {
+    color: #61DAFB;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #61DAFB;;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: all ease-in-out 250ms;
+}
+
+.nav-links li a:hover::before {
+    width: 100%;
+}
+
+
+/*Styling Buttons*/
+.login-button {
+    background-color: transparent;
+    border: 1.5px solid var(--heading);
+    color: var(--textColour);
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    margin-left: 2vw;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+.login-button:hover {
+    color: #131418;
+    background-color: var(--textColour);
+    border: 1.5px solid var(--textColour);
+    border: 1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+
+
+.join-button {
+    color: #131418;
+    background-color: #61DAFB;;
+    border: 1.5px solid #61DAFB;;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.join-button:hover {
+    color: #f2f5f7;
+    background-color: transparent;
+    border: 1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Exercise Sections */
+.exercise-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1200px;
+    /* Make the main content wider */
+    margin: 0 auto;
+    /* Center the main content */
+}
+
+.exercise-details {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+
+    >img {
+        width: 350px;
+        height: 350px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .exercise-details {
+        flex-wrap: nowrap;
+    }
+}
+
+.image-section {
+    display: contents;
+}
+
+.image-section img {
+    /* max-width: 100%; */
+    /*height: 345px;
+    width: 345px;*/
+
+
+}
+
+.steps-process-section {
+    margin-left: 20px;
+    color: var(--textColour);
+}
+
+.each-step-process {
+    margin-bottom: 10px;
+}
+
+.step {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.process {
+    font-size: 15px;
+}
+
+.exercise-section {
+    width: 75%;
+    /* Set width to 75% of the page */
+    margin: 0 auto;
+    /* Center align */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    /* Change content color to black */
+
+}
+
+.exercise {
+    /*background-color: #4d4c5c;  Light gray */
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 20px;
+    width: 100%;
+    background-color: var(--cardColor);
+
+    transition: box-shadow 0.3s ease;
+
+    /* box-shadow: 0 10px 15px #4d4c5c; */
+}
+
+.exercise:hover {
+    /* transform: translateY(-5px); Move the div 5 pixels up on hover */
+    box-shadow: 0 0 10px 10px #28282f;
+    /* Increase the box shadow on hover */
+
+}
+
+.exercise h2 {
+    margin-bottom: 30px;
+}
+
+
+.exercise h2 {
+    font-size: 40px;
+    /* Increase the font size of h2 */
+    text-transform: uppercase;
+    /* Convert text to uppercase */
+    font-weight: bold;
+    /* Make the font bold */
+}
+
+.exercise:hover h2 {
+    /* color: #61DAFB; Brighten the color of h2 on hover */
+    text-shadow: 0 0 7px rgb(115, 114, 114);
+}
+
+@keyframes changeColor {
+    0% {
+        color: white;
+    }
+
+    /* Start color */
+    25% {
+        color: #CCCCCC;
+    }
+
+    /* Color change at 25% */
+    50% {
+        color: #888888;
+    }
+
+    /* Color change at 50% */
+    75% {
+        color: #0326c0;
+    }
+
+    /* Color change at 75% */
+    100% {
+        color: #61DAFB;
+    }
+
+    /* End color */
+}
+
+.exercise h2 {
+    font-size: 40px;
+    /* Increase the font size of h2 */
+    color: var(--heading);
+    font-weight: bold;
+    /* Make the font bold */
+    animation: changeColor 5s infinite; /* Apply color transition animation */
+}

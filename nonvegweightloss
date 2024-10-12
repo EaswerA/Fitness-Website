@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Plant Protein Sources</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: pulse 1.5s ease infinite alternate;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 15px;
+            position: relative;
+            animation: slideIn 1s forwards;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            width: 20px;
+            height: 2px;
+            background-color: #4CAF50;
+            animation: linePulse 1.5s ease infinite alternate;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes linePulse {
+            from {
+                width: 20px;
+            }
+            to {
+                width: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Best Plant Protein Sources</h1>
+        <ul>
+            <li>Black Beans: 15 grams of protein per 1 cooked cup</li>
+            <li>Chickpeas: 15 grams of protein per 1 cooked cup</li>
+            <li>Edamame: 17 grams of protein per 1 cooked cup</li>
+            <li>Tempeh: 31 grams of protein per 1 cooked cup</li>
+            <li>Tofu: 20 grams of protein per 1 cooked cup</li>
+            <li>Lentils: 18 grams of protein per 1 cooked cup</li>
+        </ul>
+    </div>
+</body>
+</html>

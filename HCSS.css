@@ -47,6 +47,8 @@ nav {
 .nav-links li a {
     text-decoration: none;
     margin: 0 0.7vw;
+    position: relative;
+    /* Added for relative positioning */
 }
 
 .nav-links li a:hover {
@@ -64,12 +66,14 @@ nav {
     width: 0%;
     background-color: #61DAFB;
     position: absolute;
+    bottom: -5px;
+    /* Adjusted to position the line directly under the text */
+    left: 0;
     transition: all ease-in-out 250ms;
-    margin: 0 0 0 10%;
 }
 
 .nav-links li a:hover::before {
-    width: 80%;
+    width: 100%;
 }
 
 /*Styling Buttons*/
@@ -122,7 +126,7 @@ nav {
     display: none;
 }
 
-/*Stying for small screens*/
+/*Styling for small screens*/
 @media screen and (max-width: 800px) {
     nav {
         position: fixed;
@@ -195,20 +199,6 @@ nav {
     li.fade {
         opacity: 1;
     }
-}
-
-/*Animating Hamburger Icon on Click*/
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-    transition: all 0.7s ease;
-    width: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 * {
@@ -313,4 +303,33 @@ input:checked+label .description {
 
 .card[for="c4"] {
     background-image: url('running.jpg');
+}
+
+:root {
+    --purple: rgb(49, 223, 179);
+    --violet: rgb(223, 88, 171);
+    --pink: rgb(1, 2, 2);
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+.magic-text1 {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(to right,
+            var(--purple),
+            var(--violet),
+            var(--pink),
+            var(--purple));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
 }

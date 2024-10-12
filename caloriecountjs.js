@@ -16,6 +16,9 @@ hamburger.addEventListener('click', () => {
 document.getElementById('loginbutton').onclick = function () {
     window.location.href = 'LoginPage.html';
 };
+document.getElementById('signupbutton').onclick = function () {
+    window.location.href = 'signuppage.html';
+};
 
 var maxItems = 20;
 var initItemAmount = 10; //this is the intial amount of input rows created in the HTML

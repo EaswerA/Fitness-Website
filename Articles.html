@@ -1,11 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="Articlescss.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="hom.jpg" alt="Logo Image">
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="H.html">Home</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+                <li><a href="Tools.html">Tools</a></li>
+                <li><a href="Articles.html">Articles</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><button type="button" class="login-button" id="loginbutton">Login</button></li>
+                <li><button class="join-button" id="signupbutton">Join</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="Cbum.jpg">
+                <div class="content">
+                    <div class="author">Easwer A</div>
+                    <div class="title">Chris Bumstead</div>
+                    <div class="topic">Pro Bodybuilding</div>
+                    <div class="des">
+                        Christopher Bumstead is one of the most prolific participants in the Olympia stage. He has perfected the old school
+                        bodybuilding regimen which has enabled him to win the Mr Olympia 4 times. His routine consists of bodybuilding training
+                        methods and a bodybuilding style diet.
+                    </div>
+                    <div class="buttons">
+                        <button><a href="https://en.wikipedia.org/wiki/Chris_Bumstead" target="_blank">MORE INFO</a></button>
+                        <button><a class="a2" href="CBUM.html">READ</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="JeffNippard.jpeg">
+                <div class="content">
+                    <div class="author">Easwer A</div>
+                    <div class="title">Jeff Nippard</div>
+                    <div class="topic">Modern Bodybuilding</div>
+                    <div class="des">
+                        Jeff Nippard has gained widespread internet fame in the fitness community for his modern and scientific bodybuilding
+                        routines. Keeping up to check on the latest research, he continuosly improves his training methods and nutrition to
+                        achieve the ideal routine. Suited for modern lifters.
+                    </div>
+                    <div class="buttons">
+                        <button><a href="https://fitnesswiki.net/jeff-nippard/" target="_blank">MORE INFO</a></button>
+                        <button><a class="a2" href="JeffNippard.html">READ</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="brucelee.jpg">
+                <div class="content">
+                    <div class="author">Easwer A</div>
+                    <div class="title">Bruce Lee</div>
+                    <div class="topic">Martial Artist</div>
+                    <div class="des">
+                        Bruce Lee is one of the most renowned martial artists in the world. His talent and insane fighting skill were displayed
+                        in his numerous movies. Bruce Lee's training styles and methodolgies are perfectly suited for anyone who is interested
+                        in combat sports
+                    </div>
+                    <div class="buttons">
+                        <button><a href="https://en.wikipedia.org/wiki/Bruce_Lee" target="_blank">MORE INFO</a></button>
+                        <button><a class="a2" href="BruceLee.html">READ</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="CrisRonaldo.webp">
+                <div class="content">
+                    <div class="author">Easwer A</div>
+                    <div class="title">Cristiano Ronaldo</div>
+                    <div class="topic">Athlete</div>
+                    <div class="des">
+                        Cristiano Ronaldo has cemented his place as one of the greatest ever in the sport of Football. He reached this position
+                        due to his amazing work ethic and drive. continuosly training, his style is best suited for athletes.
+                    </div>
+                    <div class="buttons">
+                        <button><a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank">MORE INFO</a></button>
+                        <button><a class="a2" href="CrisRonaldo.html">READ</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="Cbum.jpg">
+                <div class="content">
+                    <div class="title">
+                        C. Bumstead
+                    </div>
+                    <div class="description">
+                        Pro Bodybuilding
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="JeffNippard.jpeg">
+                <div class="content">
+                    <div class="title">
+                        J. Nippard
+                    </div>
+                    <div class="description">
+                        Bodybuilding
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="brucelee.jpg">
+                <div class="content">
+                    <div class="title">
+                        B. Lee
+                    </div>
+                    <div class="description">
+                        Martial Artist
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="CrisRonaldo.webp">
+                <div class="content">
+                    <div class="title">
+                        C. Ronaldo
+                    </div>
+                    <div class="description">
+                        Athlete
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev">
+                < </button>
+                    <button id="next"> > </button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+
+    <script src="Articlesjs.js"></script>
 </body>
+
 </html>

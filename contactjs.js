@@ -16,6 +16,9 @@ hamburger.addEventListener('click', () => {
 document.getElementById('loginbutton').onclick = function () {
     window.location.href = 'LoginPage.html';
 };
+document.getElementById('signupbutton').onclick = function () {
+    window.location.href = 'signuppage.html';
+};
 
 document.getElementById("cards").onmousemove = e => {
     for (const card of document.getElementsByClassName("card")) {
